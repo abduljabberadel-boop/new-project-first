@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>الخطوط الجوية اليمنية - سافر بثقة وراحة ✈️</title>
+        <meta name="description" content="احجز رحلتك بسهولة مع شركة الطيران الأفضل في العالم.">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header>
+        <div class="head"> 
+         <button class="menu"  aria-label="فتح القائمة " aria-controls="sidemenu" aria-expanded="false">☰</button>
+            <div class="logo-center">
+                <div class="logo">
+                    <div class="logo icon">✈️</div>
+                    <div class="logo-text">
+                    <h1> الخطوط الجوية اليمنية</h1>
+                    <p>الناقل الوطني للجمهورية اليمنية – سافر بثقة وراحة</p>
+                    </div>
+                </div>
+            </div>
+        <div class="header-balance"></div>
+        </div>
+    </header>  
+    <!-- القائمة الجانبية -->
+    <div class="side-menu" id="sideMenu" role="dialog" aria-hidden="true" aria-modal="true">
+        <button class="close-btn" id="closeBtn" aria-label="إغلاق القائمة"></button>
+        <ul>
+            <li><a href="index.html" class="active"> الرئيسية</a></li>
+            <li><a href="booking.html">حجز الرحلة</a></li>
+            <li><a href="login.html">صفحة التسجيل</a></li>
+            <li><a href="card.html">البطاقة</a></li>
+            <li><a href="#contact"> تواصل معنا</a></li>
+        </ul>
+    </div>
+
+    <main class="booking-container">
+        <div class="container">
+            <div class="booking-header">
+                <h1 class="page-title">حجز تذكرة الطيران ✈️</h1>
+                <p class="page-subtitle">املأ النموذج أدناه لحجز رحلتك بسهولة وأمان</p>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">نوع الرحلة</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">المعلومات الشخصية</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">تفاصيل الرحلة</span>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-label">التاكيد والدفع</span>
+                </div>
+                <div class="progress-bar-fill" id="progressFill"style="width: 25%;"></div>
+            </div>
+        </div>
+
+        <form id="bookingForm" class="booking-form">
+            <!-- الخطوة 1: نوع الرحلة -->
+             <div class="form-step active" id="step1">
+                <div class="step-header">
+                    <h1>اختر نوع الرحلة</h1>
+                    <p>اختر نوع الرحلة التي تناسب احتياجاتك</p>
+                </div>
+                <div class="trip-type">
+                    <div class="trip-option">
+                        <input type="radio" id="one-way" name="tripType" value="one-way" checked>
+                        <label for="one-way" class="trip-card">
+                            <div class="trip-icon">➡️</div>
+                            <h3>ذهاب فقط</h3>
+                            <p>رحلة في اتجاه واحد الى رحلتك</p>
+                            <div class="trip-badge">الأكثر شيوعاً</div>
+                        </label>
+                    </div>
+
+                    <div class="trip-option">
+                        <input type="radio" id="round-trip" name="tripType" value="round-trip">
+                        <label for="round-trip" class="trip-card">
+                            <div class="trip-icon">🔄</div>
+                            <h3>ذهاب وعودة</h3>
+                            <p>رحلة ذهاب وعودة من والى وجهتك</p>
+                        </label>
+                    </div>
+                    <div class="trip-option">
+                        <input type="radio" id="multi-city" name="tripType" value="multi-city">
+                        <label for="multi-city" class="trip-card">
+                            <div class="trip-icon">🌍</div>
+                            <h3>متعددالوجهات</h3>
+                            <p>رحلة بوجهات متعددة حسب رغبتك</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="step-actions">
+                    <button type="button" class="primary-next-step" data-next="2">التالي</button>
+                </div>
+            </div>
+            <!-- الخطوة 2: المعلومات الشخصية -->
+             <div class="form-step" id="step2">
+                <div class="step-header">
+                    <h3>المعلومات الشخصية</h3>
+                    <p>ادخل معلوماتك الخصية بشكل صحيح</p>
+                </div>
+
+                <div class="form-section">
+                    <h3>المعلوما الاساسية</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">الاسم الكامل *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="ادخل الاسم الكامل">
+                            <span class="form-hint">كما يظهر في جواز السفر</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+xxxxxxxxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="passengers"> عدد الركاب *</label>
+                            <select name="passengers" id="passengers" required>
+                                <option value="">اختر عدد الركاب </option>
+                                <option value="1">1 مسافر</option>
+                                <option value="2">2 مسافرين</option>
+                                <option value="3">3 مسافرين</option>
+                                <option value="4">4 مسافرين</option>
+                                <option value="5">5 مسافرين</option>
+                                <option value="6">6 مسافرين او اكثر</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h3>المستندات المطلوبة</h3>
+                    <div class="upload-grid">
+                        <div class="upload-item" onclick="document.getElementById('personalPhoto').click()">
+                            <div class="upload-icon">📷</div>
+                            <label for="personalPhoto">الصورة الشخصية</label>
+                        <input type="file" id="personalPhoto" name="personalPhoto" accept="image/*" class="file-input" onchange="updateFileName(this, 'personalPhotoName')">
+                                <span class="file-name" id="personalPhotoName">لم يتم اختيار ملف</span>
+                                <span class="form-hint">صورة حديثة بخلفية بيضاء</span>
+                            </div>
+                            
+                            <div class="upload-item" onclick="document.getElementById('idCard').click()">
+                                <div class="upload-icon">🆔</div>
+                                <label for="idCard">صورة البطاقة الشخصية</label>
+                                <input type="file" id="idCard" name="idCard" accept="image/*" class="file-input" onchange="updateFileName(this, 'idCardName')">
+                                <span class="file-name" id="idCardName">لم يتم اختيار ملف</span>
+                            </div>
+                            
+                            <div class="upload-item" onclick="document.getElementById('passport').click()">
+                                <div class="upload-icon">📒</div>
+                                <label for="passport">صورة الجواز</label>
+                                <input type="file" id="passport" name="passport" accept="image/*" class="file-input" onchange="updateFileName(this, 'passportName')">
+                                <span class="file-name" id="passportName">لم يتم اختيار ملف</span>
+                            </div>
+                            
+                            <div class="upload-item" onclick="document.getElementById('visa').click()">
+                                <div class="upload-icon">🛂</div>
+                                <label for="visa">التأشيرة (إذا وجدت)</label>
+                                <input type="file" id="visa" name="visa" accept="image/*" class="file-input" onchange="updateFileName(this, 'visaName')">
+                                <span class="file-name" id="visaName">لم يتم اختيار ملف</span>
+                                <span class="form-hint">اختياري</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button type="button" class="cta-button secondary prev-step" data-prev="1">السابق</button>
+                        <button type="button" class="cta-button primary next-step" data-next="3">التالي</button>
+                    </div>
+                </div>
+
+                <!-- الخطوة 3: تفاصيل الرحلة -->
+                <div class="form-step" id="step3">
+                    <div class="step-header">
+                        <h2>تفاصيل الرحلة</h2>
+                        <p>اختر تفاصيل رحلتك والخدمات الإضافية</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>معلومات الرحلة الأساسية</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="flightClass">فئة الرحلة *</label>
+                                <select id="flightClass" name="flightClass" required>
+                                    <option value="">اختر فئة الرحلة</option>
+                                    <option value="economy">الدرجة الاقتصادية</option>
+                                    <option value="premium-economy">الدرجة الاقتصادية المتميزة</option>
+                                    <option value="business">درجة رجال الأعمال</option>
+                                    <option value="first">الدرجة الأولى</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fromCity">مدينة المغادرة *</label>
+                                <select id="fromCity" name="fromCity" required>
+                                    <option value="">اختر مدينة المغادرة</option>
+                                    <option value="RUH">صنعاء</option>
+                                    <option value="JED">عدن</option>
+                                    <option value="DMM">حضرموت</option>
+                                    <option value="MED">مارب</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="toCity">مدينة الوصول *</label>
+                                <select id="toCity" name="toCity" required>
+                                    <option value="">اختر مدينة الوصول</option>
+                                    <option value="DXB">دبي (DXB)</option>
+                                    <option value="AUH">أبوظبي (AUH)</option>
+                                    <option value="CAI">القاهرة (CAI)</option>
+                                    <option value="LHR">لندن (LHR)</option>
+                                    <option value="CDG">باريس (CDG)</option>
+                                    <option value="JFK">نيويورك (JFK)</option>
+                                    <option value="IST">إسطنبول (IST)</option>
+                                    <option value="RUH">الرياض (RUH)</option>
+                                    <option value="JED">جدة (JED)</option>
+                                    <option value="DMM">الدمام (DMM)</option>
+                                    <option value="MED">المدينة المنورة (MED)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="departureDate">تاريخ المغادرة *</label>
+                                <input type="date" id="departureDate" name="departureDate" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h3>الخدمات الإضافية</h3>
+                        <div class="services-grid-checkbox">
+                            <div class="service-option">
+                                <input type="checkbox" id="hotel" name="hotel" value="hotel">
+                                <label for="hotel" class="service-card-checkbox">
+                                    <div class="service-icon">🏨</div>
+                                    <h4>حجز فندق</h4>
+                                    <p>احجز فندقك بأسعار مميزة</p>
+                                    <span class="service-price">+200 ريال</span>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="transport" name="transport" value="transport">
+                                <label for="transport" class="service-card-checkbox">
+                                    <div class="service-icon">🚗</div>
+                                    <h4>المواصلات</h4>
+                                    <p>خدمة نقل من وإلى المطار</p>
+                                    <span class="service-price">+150 ريال</span>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="meals" name="meals" value="meals">
+                                <label for="meals" class="service-card-checkbox">
+                                    <div class="service-icon">🍽️</div>
+                                    <h4>وجبات خاصة</h4>
+                                    <p>وجبات طعام حسب طلبك</p>
+                                    <span class="service-price">+100 ريال</span>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="insurance" name="insurance" value="insurance">
+                                <label for="insurance" class="service-card-checkbox">
+                                    <div class="service-icon">🛡️</div>
+                                    <h4>تأمين السفر</h4>
+                                    <p>تغطية تأمينية شاملة</p>
+                                    <span class="service-price">+250 ريال</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button type="button" class="cta-button secondary prev-step" data-prev="2">السابق</button>
+                        <button type="button" class="cta-button primary next-step" data-next="4">التالي</button>
+                    </div>
+                </div>
+                
+                    <div class="confirmation-section">
+                        <div class="confirmation-summary">
+                            <h3>ملخص الحجز</h3>
+                            <div class="summary-details" id="bookingSummary">
+                                <div class="summary-item">
+                                    <span class="summary-label">نوع الرحلة:</span>
+                                    <span class="summary-value" id="summaryTripType">ذهاب فقط</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">المسافرون:</span>
+                                    <span class="summary-value" id="summaryPassengers">1 مسافر</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">المغادرة:</span>
+                                    <span class="summary-value" id="summaryFrom">الرياض (RUH)</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">الوجهة:</span>
+                                    <span class="summary-value" id="summaryTo">دبي (DXB)</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">التاريخ:</span>
+                                    <span class="summary-value" id="summaryDate">--/--/----</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">الفئة:</span>
+                                    <span class="summary-value" id="summaryClass">الدرجة الاقتصادية</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="price-summary">
+                            <h3>تفاصيل السعر</h3>
+                            <div class="price-breakdown">
+                                <div class="price-item">
+                                    <span>سعر التذكرة الأساسي</span>
+                                    <span id="basePrice">750 ريال</span>
+                                </div>
+                                <div class="price-item">
+                                    <span>الرسوم والضرائب</span>
+                                    <span id="taxesPrice">150 ريال</span>
+                                </div>
+                                <div class="price-item">
+                                    <span>الخدمات الإضافية</span>
+                                    <span id="servicesPrice">0 ريال</span>
+                                </div>
+                                <div class="price-divider"></div>
+                                <div class="price-total">
+                                    <span>المبلغ الإجمالي</span>
+                                    <span id="totalPrice">900 ريال</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-section">
+                            <h3>طريقة الدفع</h3>
+                            <div class="payment-methods">
+                                <div class="payment-option">
+                                    <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                                    <label for="creditCard" class="payment-card">
+                                        <div class="payment-icon">💳</div>
+                                        <span>البطاقة الائتمانية</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" id="mada" name="paymentMethod" value="mada">
+                                    <label for="mada" class="payment-card">
+                                        <div class="payment-icon">💳</div>
+                                        <span>مدى</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" id="applePay" name="paymentMethod" value="applePay">
+                                    <label for="applePay" class="payment-card">
+                                        <div class="payment-icon">📱</div>
+                                        <span>Apple Pay</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button type="button" class="cta-button secondary prev-step" data-prev="3">السابق</button>
+                        <button type="button" class="cta-button primary" id="confirmBooking">تأكيد الحجز والدفع</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>شركة الطيران</h3>
+                    <p>نقدم أفضل خدمات الطيران مع الحفاظ على راحة وأمان المسافر. نضمن لك تجربة سفر لا تُنسى.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="تويتر">🐦</a>
+                        <a href="#" aria-label="فيسبوك">📘</a>
+                        <a href="#" aria-label="إنستغرام">📷</a>
+                        <a href="#" aria-label="لينكدإن">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="booking.html">حجز الرحلة</a></li>
+                        <li><a href="flight.html">رحلاتنا</a></li>
+                        <li><a href="service.html">خدماتنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="service.html">الفنادق</a></li>
+                        <li><a href="service.html">المواصلات</a></li>
+                        <li><a href="service.html">المطاعم</a></li>
+                        <li><a href="service.html">الجولات السياحية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>اتصل بنا</h4>
+                    <ul class="contact-info">
+                        <li>📞 +967771606582</li>
+                        <li>✉️ abduljabbar@gmail.com</li>
+                        <li>صنعاء - الجمهورية اليمنية📍</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 شركة الطيران. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

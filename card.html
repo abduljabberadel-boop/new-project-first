@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>الخطوط الجوية اليمنية - سافر بثقة وراحة ✈️</title>
+        <meta name="description" content="احجز رحلتك بسهولة مع شركة الطيران الأفضل في العالم.">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="head"> 
+         <button class="menu"  aria-label="فتح القائمة " aria-controls="sidemenu" aria-expanded="false">☰<button>
+            <div class="logo-center">
+                <div class="logo">
+                    <div class="logo icon">✈️</div>
+                    <div class="logo-text">
+                    <h1> الخطوط الجوية اليمنية</h1>
+                    <p>الناقل الوطني للجمهورية اليمنية – سافر بثقة وراحة</p>
+                    </div>
+                </div>
+            </div>
+        <div class="header-balance"></div>
+    </header>  
+    <!-- القائمة الجانبية -->
+    <div class="side-menu" id="sideMenu" role="dialog" aria-hidden="true" aria-modal="true">
+        <button class="close-btn" id="closeBtn" aria-label="إغلاق القائمة"></button>
+        <ul>
+            <li><a href="index.html" class="active"> الرئيسية</a></li>
+            <li><a href="booking.html">حجز الرحلة</a></li>
+            <li><a href="login.html">صفحة التسجيل</a></li>
+            <li><a href="card.html">البطاقة</a></li>
+            <li><a href="#contact"> تواصل معنا</a></li>
+        </ul>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="confirmation-container">
+        <div class="container">
+            <div class="confirmation-header">
+                <h1 class="page-title">تم تأكيد حجزك بنجاح! ✈️</h1>
+                <p class="page-subtitle">إليك بطاقة الرحلة الإلكترونية الخاصة بك. يرجى حفظها أو طباعتها لتقديمها في المطار.</p>
+            </div>
+            
+            <!-- إشعار مهم -->
+            <div class="important-notice">
+                <h3 class="notice-title">⚠️ ملاحظة هامة</h3>
+                <p class="notice-text">
+                    هذه البطاقة الإلكترونية هي وثيقة السفر الرسمية الخاصة بك. يرجى إحضارها معك إلى المطار (مطبوعة أو على هاتفك المحمول) 
+                    مع جواز السفر أو بطاقة الهوية. لن يُسمح لك بدخول صالة المطار أو صعود الطائرة دون هذه البطاقة.
+                </p>
+            </div>
+        </div>
+        
+            <!-- البطاقة الإلكترونية -->
+            <div class="ticket-card">
+                <div class="ticket-header">
+                    <div class="airline-info">
+                        <div class="airline-logo">✈️</div>
+                        <div class="airline-name">
+                            <h2>الخطوط الجوية اليمنية</h2>
+                            <p>الناقل الوطني للجمهورية اليمنية</p>
+                        </div>
+                    </div>
+                    <div class="ticket-status">تم التأكيد</div>
+                </div>
+                
+                <div class="ticket-body">
+                    <!-- تفاصيل الرحلة -->
+                    <div class="flight-details">
+                        <div class="departure">
+                            <div class="city" id="departureCity">الرياض</div>
+                            <div class="airport" id="departureAirport">مطار الملك خالد (RUH)</div>
+                            <div class="date" id="departureDate">السبت 15 يونيو 2024</div>
+                            <div class="time" id="departureTime">08:30 صباحاً</div>
+                        </div>
+                        
+                        <div class="flight-path">
+                            <div class="flight-icon">✈️</div>
+                            <div class="flight-duration" id="flightDuration">2h 15m</div>
+                        </div>
+                        
+                        <div class="arrival">
+                            <div class="city" id="arrivalCity">دبي</div>
+                            <div class="airport" id="arrivalAirport">مطار دبي الدولي (DXB)</div>
+                            <div class="date" id="arrivalDate">السبت 15 يونيو 2024</div>
+                            <div class="time" id="arrivalTime">10:45 صباحاً</div>
+                        </div>
+                    </div>
+               
+                    <!-- معلومات الرحلة والمسافر -->
+                    <div class="passenger-details">
+                        <div class="detail-section">
+                            <h3 class="section-title">معلومات الرحلة</h3>
+                            <div class="detail-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">رقم الرحلة</span>
+                                    <span class="detail-value" id="flightNumber">YM205</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">نوع الرحلة</span>
+                                    <span class="detail-value" id="tripType">ذهاب فقط</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">فئة المقعد</span>
+                                    <span class="detail-value" id="seatClass">الدرجة الاقتصادية</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">البوابة</span>
+                                    <span class="detail-value" id="gate">B12</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">مقعد</span>
+                                    <span class="detail-value" id="seatNumber">24A</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">الحالة</span>
+                                    <span class="detail-value" id="flightStatus">مجدول</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3 class="section-title">معلومات المسافر</h3>
+                            <div class="detail-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">الاسم الكامل</span>
+                                    <span class="detail-value" id="passengerName">أحمد محمد عبدالله</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">رقم الحجز</span>
+                                    <span class="detail-value" id="bookingRef">YM8X4T2R9</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">البريد الإلكتروني</span>
+                                    <span class="detail-value" id="passengerEmail">ahmed@example.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">رقم الهاتف</span>
+                                    <span class="detail-value" id="passengerPhone">0551234567</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket-footer">
+                    <div class="barcode">1234567890YM8X4T2R9</div>
+                    <div class="booking-reference">
+                        <div class="reference-label">رقم الحجز</div>
+                        <div class="reference-value" id="bookingReference">YM8X4T2R9</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أزرار الإجراءات -->
+            <div class="actions">
+                <button class="btn btn-primary" onclick="window.print()">
+                    <span>🖨️</span>
+           
+                </button>
+                <a href="index.html" class="btn btn-secondary">
+                    <span>🏠</span>
+                    العودة للرئيسية
+                </a>
+                <button class="btn btn-secondary" id="sendEmailBtn">
+                    <span>📧</span>
+                    إرسال إلى بريدي الإلكتروني
+                </button>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>شركة الطيران</h3>
+                    <p>الخطوط الجوية اليمنية هي الناقل الوطني للجمهورية اليمنية، نقدم أفضل خدمات الطيران مع الحفاظ على راحة وأمان المسافر. نضمن لك تجربة سفر لا تُنسى.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="تويتر">🐦</a>
+                        <a href="#" aria-label="فيسبوك">📘</a>
+                        <a href="#" aria-label="إنستغرام">📷</a>
+                        <a href="#" aria-label="لينكدإن">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="booking.html">حجز الرحلة</a></li>
+                        <li><a href="flights.html">رحلاتنا</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="admin.html">الإدارة</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="services.html">الفنادق</a></li>
+                        <li><a href="services.html">المواصلات</a></li>
+                        <li><a href="services.html">المطاعم</a></li>
+                        <li><a href="services.html">الجولات السياحية</a></li>
+                        <li><a href="services.html">البطاقة الذكية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>اتصل بنا</h4>
+                    <ul class="contact-info">
+                        <li>📞 800-123-4567</li>
+                        <li>✉️ info@yemenia.com</li>
+                        <li>📍 صنعاء، الجمهورية اليمنية</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 الخطوط الجوية اليمنية. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <script src="main.js"></script>
+    </body>
+</html>
